@@ -3,6 +3,11 @@
 	
 		static public function olustur($sifre = 'cyber-warrior',$s_sayi = 1){
 			
+			$k_sayi = strlen($sifre);
+			if($s_sayi > $k_sayi or !is_numeric($s_sayi) or $s_sayi < 1){
+				$s_sayi = 1;
+			}
+			
 			if($_POST and isset($_POST['sifre']) and $_POST['sifre']){
 			
 				$dizi = array();
